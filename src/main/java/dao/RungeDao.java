@@ -1,13 +1,14 @@
-package Dao;
+package dao;
 
 
-import Datos.EulerTO;
+import domain.EulerTO;
+import dto.Rungedto;
 import interfaces.Esqueleto;
 
 import java.text.DecimalFormat;
 
-public class Runge implements Esqueleto {
-    Dao dao = new Dao();
+public class RungeDao implements Esqueleto {
+    Rungedto Rungedto = new Rungedto();
 
     public double[][] ejecucion_mat(double h, String fa, String fb, double x1, double y1, double N, double[] t) {
         double[][] array = new double[(int) N][2];
@@ -44,26 +45,26 @@ public class Runge implements Esqueleto {
 
     @Override
     public EulerTO ingress() {
-        return dao.ingress();
+        return Rungedto.ingress();
     }
 
     @Override
     public double[] execution_t(double v, int i, double v1) {
-        return dao.execution_t(v, i, v1);
+        return Rungedto.execution_t(v, i, v1);
     }
 
     @Override
     public void print(double[] doubles, double[][] doubles1, int i) {
-        dao.print(doubles, doubles1, i);
+        Rungedto.print(doubles, doubles1, i);
     }
 
     @Override
     public void graffiti(String s, double[][] doubles, double[] doubles1, String s1, String s2) {
-        dao.graffiti(s, doubles, doubles1, s1, s2);
+        Rungedto.graffiti(s, doubles, doubles1, s1, s2);
     }
 
     @Override
     public double function(String s, double v, double v1) {
-        return dao.function(s, v, v1);
+        return Rungedto.function(s, v, v1);
     }
 }

@@ -1,8 +1,8 @@
-package Ejecutable;
+import exec.EjecutableRungeDao;
 
 public class RungeKutta {
     public static void main(String[] args) {
-        EjecutableRunge Executable=new EjecutableRunge();
+        EjecutableRungeDao Executable=new EjecutableRungeDao();
         Executable.process();
     }
 }

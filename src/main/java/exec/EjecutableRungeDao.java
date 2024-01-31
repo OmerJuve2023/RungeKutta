@@ -1,11 +1,11 @@
-package Ejecutable;
+package exec;
 
-import Dao.Runge;
-import Datos.EulerTO;
+import dao.RungeDao;
+import domain.EulerTO;
 
 import java.util.Scanner;
 
-public class EjecutableRunge extends Runge {
+public class EjecutableRungeDao extends RungeDao {
 
     EulerTO Datos;
     double[] t;
