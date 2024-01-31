@@ -1,6 +1,6 @@
-package Dao;
+package dto;
 
-import Datos.EulerTO;
+import domain.EulerTO;
 import interfaces.Esqueleto;
 import org.math.plot.Plot2DPanel;
 import org.nfunk.jep.JEP;
@@ -9,7 +9,7 @@ import javax.swing.*;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class Dao implements Esqueleto {
+public class Rungedto implements Esqueleto {
     @Override
     public EulerTO ingress() {
         EulerTO euler = new EulerTO();
